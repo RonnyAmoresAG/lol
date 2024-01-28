@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  buscar() {
+    // Lógica de búsqueda, realizar una acción
+    console.log('Botón de buscar clicado');
+  }
 }
