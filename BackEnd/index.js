@@ -4,7 +4,7 @@ var port='3600';
 mongoose.promise=global.Promise;
 mongoose.set("strictQuery",false);
 var app=require('./app');
-mongoose.connect('mongodb://127.0.0.1:27017/concesionario')
+mongoose.connect('mongodb://127.0.0.1:27017/hotel')
 .then(()=>{
     console.log("Conexion a BDD");
     app.listen(port,()=>{
