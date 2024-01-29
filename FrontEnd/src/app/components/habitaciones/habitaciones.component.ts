@@ -10,4 +10,9 @@ export class HabitacionesComponent {
     // Lógica de búsqueda, realizar una acción
     console.log('Botón de buscar clicado');
   }
+
+  anadir() {
+    // Lógica de búsqueda, realizar una acción
+    console.log('Botón de buscar clicado');
+  }
 }
