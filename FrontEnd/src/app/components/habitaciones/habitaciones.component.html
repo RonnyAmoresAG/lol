@@ -1,8 +1,3 @@
-<!-- Encabezado con el logo y el título -->
-<div>
-  <i class="fas fa-snowflake"></i> <!-- Asegúrate de ajustar la clase del icono según tu configuración -->
-  <h1>Hotel Copo de Nieve</h1>
-</div>
 
 <!-- Sección de Check In, Check Out y el botón de buscar -->
 <div class="container">
@@ -20,119 +15,26 @@
 </div>
 
 <div class="data">
+  <nav class="tarjetas" *ngFor="let habitacion of Habitaciones">
+    <div class="habitacionImagen">
+      <img [src]="url + 'get-imagenhabitacion/' + habitacion.Imagen" width="30%" height="70%" />
+    </div>
 
-  <nav class="tarjetas">
-     <div class="habitacionImagen">
-     <img src="https://www.conely.es/wp-content/uploads/2019/07/decoracion-habitacion-hotel.jpg" width="30%" height="70%"/>
-     </div>
-
-     <div class="informacion">
-     <h3>Numero de Habitacion: 1</h3>
-     <h3>Tipo de Habitacion: Suite</h3>
-     <h3>Capacidad Maxima: 4</h3>
-     <h3>Tipo de Cama: Grande</h3>
-     <h3>Precio: 200</h3>
-     <h3>Disponibilidad: true</h3>
-     <h3>Tipo de Alojamiento: Cabaña</h3>
+    <div class="informacion">
+      <h3>Numero de Habitacion: {{ habitacion.NumeroHabitacion }}</h3>
+      <h3>Tipo de Habitacion: {{ habitacion.TipoHabitacion }}</h3>
+      <h3>Capacidad Maxima: {{ habitacion.CapacidadMaxima }}</h3>
+      <h3>Tipo de Cama: {{ habitacion.TipoCamas }}</h3>
+      <h3>Precio: {{ habitacion.Precio }}</h3>
+      <h3>Disponibilidad: {{ habitacion.Disponibilidad ? 'Disponible' : 'No disponible' }}</h3>
+      <h3>Tipo de Alojamiento: {{ habitacion.TipoAlojamiento }}</h3>
       <label for="adultos">Adultos: </label>
       <input type="number" id="adultos">
       <label for="ninos">Niños: </label>
       <input type="number" id="ninos">
       <p></p>
       <button (click)="anadir()">Añadir habitación</button>
-     <p></p>
-     </div>
+      <p></p>
+    </div>
   </nav>
-
-  <nav class="tarjetas">
-   <div class="habitacionImagen">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEyTkEEA9kRJ3fBiNsAh55gC0AnavMi1ak4g&usqp=CAU" width="30%" height="70%"/>
-   </div>
-
-   <div class="informacion">
-     <h3>Numero de Habitacion: 2</h3>
-     <h3>Tipo de Habitacion: Doble</h3>
-     <h3>Capacidad Maxima: 4</h3>
-     <h3>Tipo de Cama: Extra-grande</h3>
-     <h3>Precio: 300</h3>
-     <h3>Disponibilidad: true</h3>
-     <h3>Tipo de Alojamiento: Cabaña</h3>
-      <label for="adultos">Adultos: </label>
-      <input type="number" id="adultos">
-      <label for="ninos">Niños: </label>
-      <input type="number" id="ninos">
-      <p></p>
-      <button (click)="anadir()">Añadir habitación</button>
-     <p></p>
-   </div>
-</nav>
-
-<nav class="tarjetas">
-  <div class="habitacionImagen">
-   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEyTkEEA9kRJ3fBiNsAh55gC0AnavMi1ak4g&usqp=CAU" width="30%" height="70%"/>
-  </div>
-
-  <div class="informacion">
-  <h3>NumeroHabitacion: 3</h3>
-  <h3>TipoHabitacion: Estandar</h3>
-  <h3>CapacidadMaxima: 5</h3>
-  <h3>TipoCamas: Dobles</h3>
-  <h3>Precio: 350</h3>
-  <h3>Disponibilidad: false</h3>
-  <h3>TipoAlojamiento: Resort</h3>
-      <label for="adultos">Adultos: </label>
-      <input type="number" id="adultos">
-      <label for="ninos">Niños: </label>
-      <input type="number" id="ninos">
-      <p></p>
-      <button (click)="anadir()">Añadir habitación</button>
-     <p></p>
- </div>
-</nav>
-
-<nav class="tarjetas">
-<div class="habitacionImagen">
-  <img src="https://www.hotelvalencialasarenas.com/wp-content/blogs.dir/1493/files/cabeceras//habitaciones-1.jpg" width="30%" height="70%"/>
-</div>
-
- <div class="informacion">
-  <h3>Numero de Habitacion: 4</h3>
-  <h3>Tipo de Habitacion: Familiar</h3>
-  <h3>Capacidad Maxima: 6</h3>
-  <h3>Tipo de Cama: Simples</h3>
-  <h3>Precio: 500</h3>
-  <h3>Disponibilidad: true</h3>
-  <h3>Tipo de Alojamiento: Cabaña</h3>
-      <label for="adultos">Adultos: </label>
-      <input type="number" id="adultos">
-      <label for="ninos">Niños: </label>
-      <input type="number" id="ninos">
-      <p></p>
-      <button (click)="anadir()">Añadir habitación</button>
-     <p></p>
- </div>
-</nav>
-
-<nav class="tarjetas">
-  <div class="habitacionImagen">
-  <img src="https://www.lavanguardia.com/files/image_449_220/uploads/2018/02/19/5fa43281b43b8.jpeg" width="30%" height="70%"/>
-</div>
-<div class="informacion">
-  <h3>Numero de Habitacion: 5</h3>
-  <h3>Tipo de Habitacion: VIP</h3>
-  <h3>Capacidad de Maxima: 3</h3>
-  <h3>Tipo de Cama: Dobles</h3>
-  <h3>Precio: 750</h3>
-  <h3>Disponibilidad: true</h3>
-  <h3>Tipo de Alojamiento: Suit Ejecutiva</h3>
-      <label for="adultos">Adultos: </label>
-      <input type="number" id="adultos">
-      <label for="ninos">Niños: </label>
-      <input type="number" id="ninos">
-      <p></p>
-      <button (click)="anadir()">Añadir habitación</button>
-     <p></p>
-</div>
-</nav>
-
 </div>
