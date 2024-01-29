@@ -3,7 +3,7 @@ var express=require('express');
 var bodyParser=require('body-parser');
 
 var app=express();
-var concesionario_routes=require('./routes/concesionario');
+var hotel_routes=require('./routes/hotel');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
@@ -14,5 +14,5 @@ app.use((req,res,next)=>{
     res.header('Allow','GET,POST,OPTIONS,PUT,DELETE');
     next();
 });
-app.use('/',concesionario_routes);
+app.use('/',hotel_routes);
 module.exports=app;
