@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./habitaciones.component.css']
 })
 export class HabitacionesComponent {
-
+  buscar() {
+    // Lógica de búsqueda, realizar una acción
+    console.log('Botón de buscar clicado');
+  }
 }

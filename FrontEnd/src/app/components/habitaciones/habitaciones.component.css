@@ -1,0 +1,47 @@
+/* Estilos para el encabezado */
+div {
+    background-color: #001F3F; /* Color azul oscuro */
+    padding: 1px ;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #FFF; /* Texto blanco */
+  }
+  
+  /* Estilos para la sección de Check In, Check Out y el botón de buscar */
+  .container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .date-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  h2 {
+    color: #FFF; /* Texto blanco */
+    margin-right: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: white; /* Color azul acero */
+    color: black; /* Texto blanco */
+    padding: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: gray; /* Cambio de color al pasar el ratón (azul oscuro) */
+  }
+
+
