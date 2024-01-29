@@ -1,0 +1,62 @@
+#menu {
+    background-color: #131921; /* Fondo azul para la cabecera */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #menu img {
+    margin-right: 20px; /* Separación de 20px entre la imagen y el h1 */
+  }
+  
+  #menu h1 {
+    margin-right: 100px; /* Separación de 20px entre h1 y ul */
+    color: white;
+    font-size: 36px;
+  
+  }
+  
+  #menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  
+  }
+  
+  #menu li {
+    margin-right: 25px; /* Espaciado entre elementos de la lista */
+  
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box; /* Ajusta el modelo de caja para incluir el tamaño del borde */
+    font-size: 30px;
+  }
+  
+  a:hover {
+    border: 2px solid #fff;
+    padding: 6px; /* Ajusta el espacio interior según tus necesidades */
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  #search-box {
+    width: 600px;
+    display: flex;
+    justify-content: center; /* Centra verticalmente el contenido */
+    margin-left: auto;
+  }
+  
+  #search-box input {
+    margin-right: 10px; /* Separación entre el cuadro de búsqueda y el icono de búsqueda */
+    width: 450px;
+  
+  }
+  
+  #search-icon {
+    cursor: pointer;
+  }

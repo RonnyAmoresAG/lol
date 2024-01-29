@@ -1,19 +1,17 @@
-<h1>Hotel Copo de nieve</h1>
 <nav id="menu">
+  <img width="60 px" src="https://images.vexels.com/media/users/3/261410/isolated/preview/173ad4ca662f80dabcc79ef41bbd1086-icono-de-copo-de-nieve-bota-nico-de-invierno.png" alt="">
+  <h1>Hotel Copo de nieve</h1>
   <ul>
     <li><a [routerLink]="['/inicio']">Inicio</a></li>
     <li><a [routerLink]="['/habitaciones']">Habitaciones</a></li>
-    <!-- <li><a [routerLink]="['/contacto']">Contacto</a></li> -->
-    <!-- <li><a [routerLink]="['/clientes']">Log in</a></li> -->
-    <!-- <li><a [routerLink]="['/guardar-cliente']">Guardar Cliente</a></li>  -->
   </ul>
+  <div id="search-box">
+    <input type="text" placeholder="Buscar...">
+    <img width="40 px" id="search-icon" src="https://cdn-icons-png.flaticon.com/512/71/71403.png" alt="Lupa">
+  </div>
 </nav>
-
+<br>
+<!-- Cuadro de búsqueda -->
 <section id="content">
   <router-outlet></router-outlet>
 </section>
-
-
-
-
-
