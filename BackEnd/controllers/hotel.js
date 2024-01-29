@@ -101,17 +101,25 @@ getHabitaciones: async function (req, res) {
   },
   
 
-  deleteHabitacion:async function(req,res){
-    try{
-      var habitacionId=req.params.id;
-      var habitacionRemoved=await Habitacion.findByIdAndRemove(habitacionId);
-      if(!habitacionRemoved) return res.status(404).send({message:'No se puede eliminar el habitacion'});
-      return res.status(200).send({habitacion:habitacionRemoved});
-    }catch (err) {
+  deleteHabitacion: async function(req, res) {
+    try {
+      var habitacionId = req.params.id;
+      console.log('Intentando eliminar habitación con ID:', habitacionId);
+      
+      var habitacionRemoved = await Habitacion.findOneAndDelete({ _id: habitacionId });
+      if (!habitacionRemoved) {
+        console.log('No se puede encontrar la habitación con ID:', habitacionId);
+        return res.status(404).send({ message: 'No se puede eliminar el habitacion' });
+      }
+  
+      console.log('Habitación eliminada:', habitacionRemoved);
+      return res.status(200).send({ habitacion: habitacionRemoved });
+    } catch (err) {
+      console.error(err);
       return res.status(500).send({ message: 'Error al eliminar los datos' });
     }
-
   },
+  
 
 
   updateHabitacion:async function(req,res){
